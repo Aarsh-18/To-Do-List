@@ -3,7 +3,8 @@ def load_tasks():
     loads the lists of tasks from the tasks.txt file
     :return: list of tasks
     '''
-    with open("tasks.txt", "r") as file:
+    filename=input("Enter the text filename: ")
+    with open(filename, "r") as file:
         return [line.strip() for line in file.readlines()]
 
 def save_tasks(tasks):
